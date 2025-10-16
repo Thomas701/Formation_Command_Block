@@ -1,4 +1,4 @@
-execute if score CRunning lvl0 matches 0 run execute positioned 0 95.5 3.99 run kill @e[type=minecraft:text_display,distance=..5]
+execute if score CRunning lvl0 matches 0 run execute positioned 0 95.5 3.99 run kill @e[type=minecraft:text_display,distance=..6]
 execute if score CRunning lvl0 matches 0 run scoreboard players set CRunning lvl0 1
 execute positioned 0 95.5 3.99 run summon minecraft:text_display 0 95.5 3.99 {text:{"text": ""}, Rotation:[180f,0f], line_width:200}
 execute positioned 0 95.5 3.99 run execute if score step lvl0 matches 0 run data merge entity @e[type=minecraft:text_display,limit=1,sort=nearest] {text:{"text":"N","color":"#FFFF55"}, line_width:200}

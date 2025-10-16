@@ -34,7 +34,7 @@ def generate_mcfunction(title_file, level, x, y, z, rot_yaw, rot_pitch, tick_del
 
     with open(file_path, mode, encoding="utf-8") as file:   
         if start_step == 0:
-            file.write(f"execute if score CRunning lvl{level} matches 0 run execute positioned {x} {y} {z} run kill @e[type=minecraft:text_display,distance=..5]\n")
+            file.write(f"execute if score CRunning lvl{level} matches 0 run execute positioned {x} {y} {z} run kill @e[type=minecraft:text_display,distance=..6]\n")
             file.write(f"execute if score CRunning lvl{level} matches 0 run scoreboard players set CRunning lvl{level} 1\n")      
 
         # Création du texte vide avec rotation personnalisée
@@ -119,3 +119,12 @@ generate_mcfunction(2, 2, 24, 96.5, 3.99, 180, 0, 1, 1, 0, p1, "#FFFF55", l1, Tr
 generate_mcfunction(2, 2, 25, 96, 3.99, 180, 0, 1, 1, len(p1), p2, "#1dab23", l1, True)
 generate_mcfunction(2, 2, 24, 92.5, 3.99, 180, 0, 1, 2, len(p1) + len(p2), p3, "#FFFFFF", l1, True)
 generate_mcfunction(2.1, 2, 24, 92.5, -2.99, 0, 0, 1, 1, 0, p4, "#DACF00", l2, True)
+
+# --- LVL3 ---
+p1 = "Niveau 3"
+p2 = "Consigne :"
+p3 = "Allez dans 'Option' puis 'Control' puis 'Key Binds' vérifiez que la touche assignées à 'Pick Block' est bien la touche 'Middle Click' (molette de la souris). En mode créatif, cette touche permet de récupérer le block que vous regardez dans votre inventaire. Cependant si vous effectuez ce geste sur un commande block vous ne récupérez pas le contenant de ce dernier. Le command block récupéré sera 'vide' en le posant. Pour récupérer le block + son contenant, faites CTRL + Clic molette. Votre objectif est de récupérer le command block orange disponible avec son contenant et de le poser sur le block 'cible' sur le sol."
+
+generate_mcfunction(3, 3, 36, 97.5, 3.99, 180, 0, 1, 1, 0, p1, "#FFFF55", l1, True)
+generate_mcfunction(3, 3, 37, 97, 3.99, 180, 0, 1, 1, len(p1), p2, "#1dab23", l1, True)
+generate_mcfunction(3, 3, 36, 92.25, 3.99, 180, 0, 1, 3, len(p1) + len(p2), p3, "#FFFFFF", l1, True)
