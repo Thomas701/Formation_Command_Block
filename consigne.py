@@ -112,12 +112,12 @@ generate_mcfunction(1, 1, 12, 92.5, 3.99, 180, 0, 1, 2, len(p1) + len(p2), p3, "
 # --- LVL2 ---
 p1 = "Niveau 2"
 p2 = "Consigne :"
-p3 = "Si vous écrivez une commande dans le chat, les flèches haut/bas de votre clavier vous permettent de parcourir vos anciennes commandes, utile pour réutiliser une de vos précédentes commandes. La touche 'Tab' permet de compléter automatiquement une commande en cours d'écriture, elle vous aide à rédiger vos commandes. L'objectif est de remplacer les deux blocks de laine rouge par de la pierre ('stone' en anglais) à l'aide de la commande /setblock."
+p3 = "Si vous écrivez une commande dans le chat, les flèches haut/bas de votre clavier vous permettent de parcourir vos anciennes commandes. La touche 'Tab' permet de compléter automatiquement une commande en cours d'écriture. L'objectif est de remplacer les deux blocks de laine rouge par de la pierre ('stone' en anglais) à l'aide de la commande /setblock. Ciblez le block de laine rouge avec votre curseur, écrivez '/setblock' puis appuyez sur la touche 'TAB' pour compléter automatiquement les coordonnées du block ciblé par votre curseur. Enfin, terminez la commande en écrivant 'minecraft:stone' à la place de 'nom_du_block'."
 p4 = "/setblock <x> <y> <z> minecraft:<nom_du_block>"
 
-generate_mcfunction(2, 2, 24, 96.5, 3.99, 180, 0, 1, 1, 0, p1, "#FFFF55", l1, True)
-generate_mcfunction(2, 2, 25, 96, 3.99, 180, 0, 1, 1, len(p1), p2, "#1dab23", l1, True)
-generate_mcfunction(2, 2, 24, 92.5, 3.99, 180, 0, 1, 2, len(p1) + len(p2), p3, "#FFFFFF", l1, True)
+generate_mcfunction(2, 2, 24, 97.5, 3.99, 180, 0, 1, 1, 0, p1, "#FFFF55", l1, True)
+generate_mcfunction(2, 2, 25, 97, 3.99, 180, 0, 1, 1, len(p1), p2, "#1dab23", l1, True)
+generate_mcfunction(2, 2, 24, 92.25, 3.99, 180, 0, 1, 3, len(p1) + len(p2), p3, "#FFFFFF", l1, True)
 generate_mcfunction(2.1, 2, 24, 92.5, -2.99, 0, 0, 1, 1, 0, p4, "#DACF00", l2, True)
 
 # --- LVL3 ---
@@ -128,3 +128,46 @@ p3 = "Allez dans 'Option' puis 'Control' puis 'Key Binds' vérifiez que la touch
 generate_mcfunction(3, 3, 36, 97.5, 3.99, 180, 0, 1, 1, 0, p1, "#FFFF55", l1, True)
 generate_mcfunction(3, 3, 37, 97, 3.99, 180, 0, 1, 1, len(p1), p2, "#1dab23", l1, True)
 generate_mcfunction(3, 3, 36, 92.25, 3.99, 180, 0, 1, 3, len(p1) + len(p2), p3, "#FFFFFF", l1, True)
+
+# --- LVL4 ---
+p1 = "Niveau 4"
+p2 = "Consigne :"
+p3 = "Ils est important de savoir utiliser les coordonnées <x> <y> <z> pour téléporter des joueurs ou placer des blocks. Vous êtes obligé d'utiliser la touche 'F3' pour observer vos coordonnées en haut à gauche de votre écran -> 'XYZ: ...' ou 'Block: ...'. Votre objectif est de vous placer sur les coordonnées 51 91 -2."
+
+generate_mcfunction(4, 4, 48, 95.5, 3.99, 180, 0, 1, 1, 0, p1, "#FFFF55", l1, True)
+generate_mcfunction(4, 4, 49, 95, 3.99, 180, 0, 1, 1, len(p1), p2, "#1dab23", l1, True)
+generate_mcfunction(4, 4, 48, 92.5, 3.99, 180, 0, 1, 3, len(p1) + len(p2), p3, "#FFFFFF", l1, True)
+
+# --- LVL5 ---
+p1 = "Niveau 5"
+p2 = "Consigne :"
+p3 = "Les commandes Minecraft peuvent utiliser des sélecteurs de cibles pour cibler des entités spécifiques (la commande ne s'applique qu'aux entités sélectionnées). Amusez-vous à les apprendre dans cette salle ! Pour la partie quiiz, on considéra que les villageois sont des joueurs."
+
+generate_mcfunction(5, 5, 60, 95.5, 3.99, 180, 0, 1, 1, 0, p1, "#FFFF55", l1, True)
+generate_mcfunction(5, 5, 61, 95, 3.99, 180, 0, 1, 1, len(p1), p2, "#1dab23", l1, True)
+generate_mcfunction(5, 5, 60, 92.5, 3.99, 180, 0, 1, 2, len(p1) + len(p2), p3, "#FFFFFF", l1, True)
+
+# --- LVL6 ---
+p1 = "Niveau 6"
+p2 = "Consigne :"
+p3 = "Il est important de différencier les coordonnées absolues et relatives. Les coordonnées absolues sont des positions fixes dans le monde (ex: 100 64 -200). Les coordonnées relatives sont basées sur la position actuelle du joueur, de l'entité ou du command block qui exécute la commande, en utilisant le symbole '~'. Par exemple, '~1 ~0 ~-2' signifie 1 bloc à l'est, 0 bloc en hauteur, et 2 blocs au sud par rapport à la position actuelle. Votre objectif est de modifier le command block pour qu'il setblock un block de slime sur la laine rouge en utilisant les coordonnées relatives. Rappel: ~0 ~0 ~0 représente la position actuelle du command block."
+
+generate_mcfunction(6, 6, 83, 97.5, 3.99, 180, 0, 1, 1, 0, p1, "#FFFF55", l1, True)
+generate_mcfunction(6, 6, 84, 97, 3.99, 180, 0, 1, 1, len(p1), p2, "#1dab23", l1, True)
+generate_mcfunction(6, 6, 83, 92.5, 3.99, 180, 0, 1, 3, len(p1) + len(p2), p3, "#FFFFFF", l1, True)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
